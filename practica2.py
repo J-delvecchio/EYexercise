@@ -15,10 +15,16 @@ def jumpOnMarsh(C):
         int: cont, minimum number of jumps requiered
     """
     
+    #If the size of the array is 2 then there is no necesity to enter the while, I just return 1 as the minimun number of jumps required
+    
+    if len(C) == 2:                           
+        return 1
+    
     i = 0
     cont = 0
-    while i < len(C)-1:                           
-        if i < len(C)-2 and C[i+2] == 0:          # Condition to not get out of range
+    while i < len(C)-1:
+        # Condition to not get out of range
+        if i < len(C)-2 and C[i+2] == 0:           
             i+=2
         else:
             i+=1
