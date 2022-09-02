@@ -1,6 +1,6 @@
 
     
-C = [0,0,0,0,1,0,0] # the size must be in the range [2,100], must be filled with just 0,1 and the first and last elements must be 0
+C = [0,1,0,0,0,1,0] # the size must be in the range [2,100], must be filled with just 0,1 and the first and last elements must be 0
 
 def jumpOnMarsh(C):
     
@@ -15,9 +15,9 @@ def jumpOnMarsh(C):
         int: cont, minimum number of jumps requiered
     """
     
-    #If the size of the array is 2 then there is no necesity to enter the while, I just return 1 as the minimun number of jumps required
+    #If the size of the array is minor or equal to 3 then there is no need to enter the while, I just return 1 as the minimun number of jumps required
     
-    if len(C) == 2:                           
+    if len(C) <=3:                           
         return 1
     
     i = 0
